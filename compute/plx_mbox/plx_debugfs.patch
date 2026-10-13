@@ -1,0 +1,29 @@
+--- /usr/src/intel-vca2-dkms/modules/vca/plx87xx/plx_debugfs.c	2026-09-19 14:22:55.646651093 -0500
++++ /usr/src/vca2-vcass-2.3.26+ubuntu24.04.10/vca/plx87xx/plx_debugfs.c	2026-09-20 21:21:57.096241044 -0500
+@@ -30,6 +30,7 @@
+ #endif
+ #include "plx_device.h"
+ #include "plx_hw.h"
++#include "plx_mbox.h"
+ 
+ /* Debugfs parent dir */
+ static struct dentry *plx_dbg;
+@@ -925,6 +926,10 @@
+ 
+ 	debugfs_create_file("alm_state", 0444, xdev->dbg_dir, xdev,
+ 			    &alm_ops);
++	debugfs_create_file("mbox_info", 0444, xdev->dbg_dir, xdev,
++			    &plx_mbox_info_ops);
++	debugfs_create_file("mbox_alloc", 0200, xdev->dbg_dir, xdev,
++			    &plx_mbox_alloc_ops);
+ }
+ 
+ /**
+@@ -932,6 +937,7 @@
+  */
+ void plx_delete_debug_dir(struct plx_device *xdev)
+ {
++	plx_mbox_remove(xdev);
+ 	if (!xdev->dbg_dir)
+ 		return;
+ 

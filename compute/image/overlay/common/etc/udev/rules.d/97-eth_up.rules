@@ -1,0 +1,5 @@
+# Kept for parity with the stock image. On systemd >= 249 this rule fires but
+# the RUN program exits 1 (udevd sandboxes and time-limits RUN), so it does
+# NOT actually configure the interface -- vca-netcfg.service does. Harmless,
+# and leaving it in keeps the diff against Intel's layout small.
+SUBSYSTEM=="net", ACTION=="add", KERNEL=="eth*", RUN+="/sbin/vca_eth_cfg.sh $name"

@@ -1,0 +1,90 @@
+# --- secrets: never commit ---
+machine_ssh_info.txt
+*_ssh_info.txt
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# --- third-party / not ours to redistribute ---
+# Intel's distribution: BIOS, EEPROM, host/card images, Windows drivers,
+# plus Windows ISOs and third-party installers. ~18 GB. Get the VCASS
+# release from Intel; see docs/SOURCE_MAP.md.
+vcawic/
+
+# VCASS 2.3.26 sources, extracted from Intel's zip. Referenced heavily by
+# docs/ but redistributed by Intel, not by us. Unpack it yourself into src/.
+src/
+
+# Intel documentation PDFs -- freely downloadable from Intel, linked in
+# docs/ rather than mirrored here.
+*.pdf
+*.PDF
+
+# Donor STL/STEP models by other authors, used only as fit references
+# for the shroud work.
+80mm_fan_shroud.stl
+Fan-mount-2x40mm-v1.4.stl
+Fan-mount-2x40mm.STEP
+
+# Provenance unclear (looks like a vendor drawing). The numbers that matter
+# are written out in README_shrouds.md.
+VCA_Dimensions.jpg
+
+# --- session / tooling artifacts ---
+.remember/
+.kt/
+.claude/
+chat_with_chatgpt.txt
+vca2_homelab_guide.zip
+# Vendor tool downloads -- Intel's to distribute, not ours.
+Sysinfo_*.zip
+*.pre-wgfix
+*.bak
+
+# --- kernel module build output ---
+*.ko
+*.o
+*.o.d
+*.mod
+*.mod.c
+*.mod.o
+*.symvers
+*.order
+.tmp_versions/
+modules.order
+Module.symvers
+.*.cmd
+
+# --- compiled userspace ---
+*.bin
+cl_probe
+cl_bench
+cl_daemon
+wg_test
+wg_sweep
+wg_one
+gk
+gk2
+gv
+gemm_fast
+gpuburn
+burn
+gbufpeek
+hostpeek
+
+# --- editor / OS ---
+*~
+.DS_Store
+Thumbs.db
+.playwright-mcp/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Bitwarden credentials -- never commit
+BW_api.txt
+*_api.txt
+VW_info.txt
+*_info.txt

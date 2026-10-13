@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: MIT
+[Unit]
+Description=Remotion render farm on VCA card 1 (nodes 3-5)
+# Borrows card 1 from smem's background lane per job; see renderfarm.py.
+After=network-online.target vca2-card.service smem-api.service
+Wants=network-online.target
+
+[Service]
+EnvironmentFile=/etc/renderfarm.env
+ExecStart=/usr/bin/python3 -u /opt/renderfarm/renderfarm.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

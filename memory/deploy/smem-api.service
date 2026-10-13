@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: MIT
+# smem HTTP API and web console, on the host.
+#
+# Deliberately NOT ordered after vca2-card.service: the API does not need the
+# nodes to start, and waiting would keep the console down for the several
+# minutes the card takes to boot. Model calls fail over and retry until the
+# nodes are up; the console shows them coming up.
+[Unit]
+Description=smem memory API and console (:8900)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+WorkingDirectory=/root/supermem
+Environment=PYTHONUNBUFFERED=1
+# Optional: put SMEM_TOKEN=<secret> in this file to require a bearer token.
+EnvironmentFile=-/root/supermem/smem.env
+ExecStart=/usr/bin/python3 -m smem.server --db /root/supermem/smem.db --container vca2-docs --port 8900
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

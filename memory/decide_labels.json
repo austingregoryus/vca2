@@ -1,0 +1,1495 @@
+{
+ "types": [
+  {
+   "text": "Bit 63 of MSR_PKG_POWER_LIMIT is 0, meaning PL1 is changeable at runtime and reverts on reset.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Node 0's send rate increased by 1.8% (from 3925 to 3997) after the OS change.",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The extracted facts achieved 100% recall, matching chunks alone, while using 2.3x fewer context tokens and being 1.7x faster.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The `VCA_VIRTIO_COPY_DESC` ioctl returns `-EFAULT` and is a stub, meaning userspace DMA should not be designed around it.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "preference"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The driver builds both roles: 18 host-role and 15 node-role modules, including vcablkfe and vcablk_bckend.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "KVMGT (GPU slices into VMs) is in the Intel matrix for Ubuntu 16.04 on this card.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The CPU is 1.9x faster since the 22.04 image.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "With RPC to node 0 only, the generation time was 30.2 t/s.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Host-push into guest RAM achieves a rate of approximately 3.7 GiB/s.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The `VCA_VIRTIO_COPY_DESC` mechanism is Stubbed with `-EFAULT` in `vop_vringh.c`.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The minimum iteration time for Node 0 was 0.033 ms.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The VCA stack was untouched, and both `vca2-vcass` DKMS entries remained intact.",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The card achieves 1.36 TFLOP/s FP32, which is 34% of its 4.0 TFLOP/s paper peak.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The blk-mq conversion is genuine and structural, with `blk_peek_request` / `blk_start_request` / `__blk_end_request_all` absent from the entire fork tree.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "ALUT doorbell mailbox on all 3 nodes has a ping of ~35 µs, and host-push into guest RAM is ~3.7 GiB/s.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "`reconcile_repair.py` re-judged the store in ~70 short calls (instead of a 72-minute re-ingest) and restored 48 facts.",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Guest `alut_gmap.ko` called `plx_add_a_lut_entry(0x4c000000)` with guest `peer_off=0x8000000`.",
+   "gold": "episode",
+   "ok": [
+    "episode",
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The mailbox structure has a 512-byte command header at LBA 0 and the payload at 4 KiB.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The topology includes host root port 00:03.2.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Wrapping the body in `<document source=\"...\">` tags fixes the issue with chunks starting with a heading path.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "preference"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Typical counts for kernel modules affected by this relocation issue are 27–44 relocations each.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The host's RTX 3070 was using `nouveau` for software encoding.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The `vca_mgr_extd` sysfs device was renamed, which breaks anything matching the old name at runtime only.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Only `ubuntu-jammy` is marked as `proven`, meaning it was built, booted, and benchmarked on the hardware.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The iGPU evicts the CPU's working set from the shared eDRAM/LLC.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Submitting several descriptors and flagging on completion callbacks would close the remaining gap to ~4000.",
+   "gold": "preference",
+   "ok": [
+    "preference",
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The host's share under the 'both' configuration was 694 fps against 688 fps when running alone, indicating no contention.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The 4462 MiB/s CPU-free ring would not resolve the serialization issue.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The maximum number of doorbells is defined as `PLX_MAXDB 16` in `plx_hw.h`.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The host program `compute/gpu_all3.py` on `vca-host` fires the same OpenCL SAXPY on all three P580s using SSH/TCP (virtio-net) transport.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Verified working modules include `alut_gmap.ko`, `n2n.ko`, and `ring.ko` when built with gcc 11 / binutils 2.38 and patched.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "For a test on node 0 with n=1536, rows=512, the performance was 9.27 GFLOP/s.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Each node utilizes an llm running gemma-4-E4B-it Q4_K_M on port 8082.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The aggregate across three nodes was corrected from \"99 -> 250\" to approximately \"109 -> 210 GFLOP/s\".",
+   "gold": "episode",
+   "ok": [
+    "episode",
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The `spoto-team/vca2-control-panel` is a Python/Flask web UI wrapping `vcactl`, which includes features like power button control, RAMDisk vs BlockIO boot selection, block device attach/detach, network status, and node status visualization.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "OLMoE reads 0.6 GB/token, which results in it being 4x faster than a dense 7B model.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "jumbo_mtu.ko and hostbuf.ko were rebuilt for 7.0.14.",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The best node↔node path reaches 4423 MiB/s pipelined, CPU-free.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "For a pure-ALU synthetic load, the `burn` workload pins the package at 43.5-44.6 W.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "MSR 0x614 (PKG_POWER_INFO) reports TDP = 45.00 W.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Intel's stock `plx87xx` cannot compile against this kernel because it supplies a `dma_map_ops` table and `.map_page` no longer exists as a member.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The script `compute/image/plt32_to_pc32.py` was written and installed as `/usr/local/sbin/plt32-to-pc32` to rewrite 27–44 relocations per module.",
+   "gold": "episode",
+   "ok": [
+    "episode",
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Only GPU+CPU together is cap-bound, reaching 43.5-44.6 W against a 45 W limit.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Host kicks doorbell 15, and the guest IRQ wakes a waiter that acknowledges the header.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The kernel `7.0.2-6-pve` remains installed.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The file `etc/systemd/system/vca-netcfg.service` runs `vca-netcfg.sh` with a timeout long enough for the retry loop.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Node 0's receive rate increased by 1.0% (from 3911 to 3949) after the OS change.",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The vca2-card.service boots the nodes at host start and powers them off cleanly at stop.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The CPU work in the combined test showed times of 0.24 s for cpu0, 0.32 s for cpu1, and 0.31 s for cpu2.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Combined throughput across the fabric when running concurrently was 8118 MiB/s.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The host already masquerades `172.31.0.0/16`.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Ingesting 22 documents resulted in 448 chunks and 748 memories in 71.9 minutes.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The parallel ping of all three nodes took approximately 63 ms wall time.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "On the working kernel, the vop-dev0* probe lines land approximately 35 seconds after the PLX links come up, which is only after vcactl boot has run.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Each node has one Skylake GT4e, PCI ID 8086:193A, with 128 MB eDRAM.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Host DMA buffer plus a guest A-LUT entry allows each node to mmap BAR2.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The gate for a newer kernel is vcablk, which uses the legacy blk_init_queue request API removed in 5.0 and needs a blk-mq conversion.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The module was built with `-g -gdwarf-5`, and its DWARF `DW_AT_comp_dir` pointed to `/usr/src/vca2-vcass-2.3.26+ubuntu24.04.10`.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Virtio-net TCP achieved speeds of approximately 4.7–5.0 Gbit/s host→node and ~3.5 Gbit/s node→host.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Guest pull of host RAM achieves a rate of approximately 28 MiB/s.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The BlockIO backend runs synchronous DMA, and the async path is dead code.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The transport used is `vca_virtio_net` in Intel's 4.14 kernel, which the new image does not replace.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The correct value for `MAX_COMPUTE_UNITS` is `0x1002`, which returns 72.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The embedder model size is 0.64 GB, and its memory usage decreased from ~5.0 GB to 0.90 GB after optimization.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Point node 0's A-LUT window at the host-domain address of node 1's NTB BAR2 instead of at host RAM.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "There is no QPI, no NVLink, and no coherent shared memory between the E3s.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The CPU GEMM n=2048 results were 54.53 on node 0, 53.80 on node 1, and 53.82 on node 2.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "When re-measured with all three nodes on one identical image, node 1 achieved a receive rate of 4973 and 4724 when reading from host RAM.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "VOP virtio-net + DMA is Real and achieves ~5 Gbit/s TCP.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Host BAR2 at each host peer_off aliases guest kernel RAM.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Two reboots occurred on 7.0.14 with the patched `plx87xx` (srcversion C7DB21AFCC365566F4BFCAA).",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "For N=1536, the per GPU GFLOP/s values were 1024 for 408, 1408 for 457, and 1536 for 445.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "When the Guest `resource2` mmap was performed at `0x22000000`, it mapped but did not hang, reading `0xffffffff`.",
+   "gold": "episode",
+   "ok": [
+    "episode",
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "With the active cooling fitted (\"super-cooler-5000\"), the idle temperature dropped from ~40 °C to 35-37 °C.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "The guest-side NTB for node 0 has BAR2 set to 4 GB at address `3e00000000` and operates over a Link of 8 GT/s ×8 (PCIe Gen3 x8).",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Guest INPUT includes TCP 9200 (OpenCL daemon) and 50052 (llama RPC).",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "64-byte alignment is required for src, dst and len (`PLX_DMA_ALIGN_SHIFT 6`) for optimal performance.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "preference"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Keep batches to ~32 docs at 2048 context.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "With all three nodes running AVX2, cores reached 92-94 °C under stock airflow.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Host writes the ALUT header and kicks db 15, spinning on `status==2`.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "random"
+  },
+  {
+   "text": "Handing the extractor a chunk starting `THERMAL.md > ...` made the model reply \"Please provide the content of THERMAL.md so I can extract the durable facts.\"",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Authentication is off by default, but it can be required on every `/v*` route by starting the server with `SMEM_TOKEN=<secret>`.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The harness now writes `bakeoff-results.json` before formatting anything, including every extracted fact.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "episode"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Trip at 85 °C, not 88, because the observed overshoot between samples was 4-6 °C.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Dropping the package limit to ~35 W would cap the AVX2 case well below 96 °C at a modest performance cost.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The recommended sizes to use are 1024, 640, or 1408, and 1536 should not be used.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The best operating range for the tuned kernel is N = 1024..2048; N=3072 drops to 256 GFLOP/s as the working set outgrows the cache.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The bake-off verdict was to stay on gemma-4-E4B.",
+   "gold": "preference",
+   "ok": [
+    "preference",
+    "episode"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Tensor parallelism could suit the fabric well, with activations around 8 KB/token/layer and a ~35 µs doorbell implying a ~450 tok/s ceiling.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The host-side engine is 1.7x SLOWER (~2300 MiB/s) for the identical transfer, and it is recommended to always initiate bulk DMA from the card side.",
+   "gold": "preference",
+   "ok": [
+    "preference",
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "A newer kernel is not worth losing 4423 MiB/s node-to-node.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The host kernel pin is unnecessary.",
+   "gold": "preference",
+   "ok": [
+    "preference",
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Editing `PKGS_BASE` is a footgun if you rely on the cache for a clean bootstrap.",
+   "gold": "preference",
+   "ok": [
+    "preference",
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Changing `PKGS_*` in a profile requires deleting `$WORK/rootfs-<profile>/` to get a clean bootstrap.",
+   "gold": "fact",
+   "ok": [
+    "fact",
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The builder assumes the Intel reference image is present.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The builder deliberately disables `systemd-resolved` to prevent the creation of a symlink in `/etc/resolv.conf` on the nodes.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The deploy script refuses to run if the master image is attached anywhere.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The `SUPPORT` field exists so the repo cannot quietly imply a profile works when nobody has booted it.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Anything reported upstream should name the local `plx87xx` patch because the team has validated the port plus a modification.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Verify copied models by SIZE, not existence, by comparing `stat -c%s` against the source.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "To recover a node whose sshd is dead, do NOT reach for `vcactl reset --force`.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "If NICs are missing, one should check `vcactl status` first, as `bios_up` means nobody booted the nodes.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "To clear the 'REMOTE HOST IDENTIFICATION HAS CHANGED' warning after swapping images, use ssh-keygen -f /root/.ssh/known_hosts -R 172.31.N.1.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "[redacted: a personal fact about the author's homelab plans for a second card]",
+   "gold": "episode",
+   "ok": [
+    "episode",
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "[redacted: a personal fact about the author's RAM upgrade plans]",
+   "gold": "preference",
+   "ok": [
+    "preference",
+    "episode"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "smem keeps gemma-4-E4B for fact extraction because MiniCPM5-2B, though 3.2x faster, captured only 9.8% of the source's numbers against gemma-4's 44.4%.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "[redacted: a since-superseded personal decision about this repository]",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "[redacted: a personal fact giving the author's LAN address for smem]",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Austin prefers terse, decision-oriented updates.",
+   "gold": "preference",
+   "ok": [
+    "preference"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The host was rebooted on 2026-09-22 to test the new units.",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "Node 0 is currently out of memory.",
+   "gold": "episode",
+   "ok": [
+    "episode"
+   ],
+   "src": "extra"
+  },
+  {
+   "text": "The PEX 8749 uplink trains at x16 Gen3.",
+   "gold": "fact",
+   "ok": [
+    "fact"
+   ],
+   "src": "extra"
+  }
+ ],
+ "pairs": [
+  {
+   "A": "Qwen3-30B-A3B Q4_K_M has a file size of 18.56 GB.",
+   "B": "The Qwen3-Embedding-0.6B model has a file size of 0.64 GB.",
+   "cos": 0.803,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "With all three nodes net_device_ready, the measurement for embeddings and retrieval using Qwen3-Embedding-0.6B Q8_0 was 0.64 GB.",
+   "B": "When using 3 nodes, the measurement for embeddings and retrieval with Qwen3-Embedding-0.6B Q8_0 was 20.18 docs/s, representing a 2.92x scaling over 1 node.",
+   "cos": 0.885,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS",
+    "UNRELATED"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "The CPU GEMM n=1024 results were 71.00 on node 0, 71.13 on node 1, and 71.50 on node 2.",
+   "B": "CPU GEMM is within 0.7% across the fleet.",
+   "cos": 0.825,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "For a test on node 0 with n=1536, rows=512, the performance was 9.27 GFLOP/s.",
+   "B": "For a test on node 0 with n=1408 and rows=512, the performance collapsed to 11.15.",
+   "cos": 0.816,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "Both `dkms build` + `dkms install --force` for `7.0.2-6-pve` and `7.0.14-17-pve` now produce `C7DB21AFCC365566F4BFCAA`.",
+   "B": "The DKMS record was fixed for both kernels `7.0.2-6-pve` and `7.0.14-17-pve` using `dkms build` + `dkms install --force`.",
+   "cos": 0.807,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "The host stack is `chainsx/intel-vca2-dkms`, not Intel's.",
+   "B": "The source for the installed stack is [`chainsx/intel-vca2-dkms`] at `edb3e51`.",
+   "cos": 0.867,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "gemma-4-E4B is a reasoning model.",
+   "B": "gemma-4-E4B supports multimodal input.",
+   "cos": 0.84,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS",
+    "UNRELATED"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "The Qwen3-Embedding-8B Q8_0 model requires 8.05 GB of memory.",
+   "B": "The Qwen3-Embedding-0.6B Q8_0 model showed a scaling factor of 2.92x.",
+   "cos": 0.831,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The configuration 'memories + chunks, no rerank' achieved a recall of 13/15 (87%) with a median rank of 1, a latency of 0.18 s, and a context size of 417 tok.",
+   "B": "The configuration 'memories only, rerank 40' achieved a recall of 13/15 (87%) with a median rank of 1, a latency of 10.9 s, and a context size of 364 tok.",
+   "cos": 0.951,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "For OLMoE-1B-7B Q4, single stream, the host only (E5-2699 v3) achieved 33.4 gen t/s.",
+   "B": "For OLMoE 1B-7B Q4, the host achieved 33.4 t/s, 1-node RPC achieved 30.2 t/s, and 3-node RPC achieved 12.7 t/s.",
+   "cos": 0.81,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS",
+    "DUPLICATE"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "The image build disables `systemd-resolved` because Ubuntu ships `/etc/resolv.conf -> ../run/systemd/resolve/stub-resolv.conf`.",
+   "B": "The builder deliberately disables `systemd-resolved` to prevent the creation of a symlink in `/etc/resolv.conf` on the nodes.",
+   "cos": 0.817,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "The size of Qwen3-Embedding-4B in Q8_0 is 4.28 GB.",
+   "B": "The Qwen3-Embedding-8B Q8_0 model showed a scaling factor of 2.94x.",
+   "cos": 0.819,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The GEMM workgroup achieved a tuned performance of 1.36 TFLOP/s.",
+   "B": "The tuned GEMM held 455.1 / 455.2 / 455.4 / 455.5 GFLOP/s across four consecutive 10 s windows at 1150 MHz, with the package pinned at its 45 W limit the whole time.",
+   "cos": 0.857,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "When using 3 nodes, the measurement for embeddings and retrieval with Qwen3-Embedding-0.6B Q8_0 was 20.18 docs/s, representing a 2.92x scaling over 1 node.",
+   "B": "The Qwen3-Embedding-0.6B Q8_0 model showed a scaling factor of 2.92x.",
+   "cos": 0.83,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "Under sustained AVX2 on one node, the hottest core reached 62 °C out of a 96 °C limit.",
+   "B": "When all three CPUs are loaded with AVX2, the temperature reaches 92-94 °C.",
+   "cos": 0.81,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The Qwen3-Embedding-8B Q8_0 model requires 8.05 GB of memory.",
+   "B": "The Qwen3-Embedding-8B Q8_0 model results in embedding 100k documents across all three nodes in 17.5 hours.",
+   "cos": 0.868,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS",
+    "UNRELATED"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "Retrieval using chunks only with rerank 40 achieved a recall@8 of 15/15 with a latency of 28.0 s and a context size of 2,845 tokens.",
+   "B": "The configuration 'chunks only, rerank 40' achieved a recall@k of 15/15 (100%) with a median rank of 1, a latency of 28.0 s, and a context size of 2,845 tok.",
+   "cos": 0.92,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The script `compute/image/plt32_to_pc32.py` was written and installed as `/usr/local/sbin/plt32-to-pc32` to rewrite 27–44 relocations per module.",
+   "B": "The tool `plt32-to-pc32` is located at `/usr/local/sbin/plt32-to-pc32` and rewrites the relocation in the object file.",
+   "cos": 0.82,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "Tiled GEMM with dimensions 384² (128 rows×3, C=384 everywhere) took a wall time of 0.012 s, achieving ~7.1–7.7 GFLOP/s naive.",
+   "B": "For 2048² GEMM, the naive kernel achieved 31–46 GFLOP/s with a wall time of 0.390 s.",
+   "cos": 0.841,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "When using an MTU of 65521, the throughput from node 2 to host on node 0 was 25.6 Gbit/s.",
+   "B": "TCP iperf3 at MTU 1500 shows that Node 0 to Node 2 throughput is 1.8 Gbit/s, which is about 8% of x8.",
+   "cos": 0.821,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The Qwen3-Embedding-8B Q8_0 model results in embedding 100k documents across all three nodes in 17.5 hours.",
+   "B": "The Qwen3-Embedding-0.6B Q8_0 model processed 256 docs in batches of 32 at a rate of 6.90 docs/s/node.",
+   "cos": 0.927,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "In steady state, all three nodes showed a power consumption of approximately 134 W and a temperature of 76 C when running all-GPU.",
+   "B": "In steady state, all three nodes showed a power consumption of approximately 130 W and a temperature of 92-94 C when running all-CPU AVX2.",
+   "cos": 0.803,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The combined peak performance reached 236.7 GFLOP/s at N=1408.",
+   "B": "All three GPUs achieved 1359.5 combined GFLOP/s for N=1408.",
+   "cos": 0.813,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "For PCI ID `0x2956` (node 2), `num_ntbs` is 1, resulting in 256 × 16 MB ALUTs.",
+   "B": "For PCI IDs, Node 2 (`0x2956`) has `num_ntbs = 1`.",
+   "cos": 0.844,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "For OLMoE-1B-7B Q4, single stream, the host only (E5-2699 v3) achieved 33.4 gen t/s.",
+   "B": "For OLMoE-1B-7B Q4, single stream, the RPC to all 3 nodes achieved 12.7 gen t/s.",
+   "cos": 0.843,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "For virtio-net with MTU 65521, the throughput from node 1 to node 2 ranges from 7954–15934 Mbit/s.",
+   "B": "When using an MTU of 65521, the throughput from node 2 to host on node 0 was 25.6 Gbit/s.",
+   "cos": 0.857,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The pipelined ring reached 3812 MiB/s for P2P.",
+   "B": "The pipelined ring reached 3812 MiB/s, an 11.7x increase from 325 MiB/s.",
+   "cos": 0.869,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "For retrieval with memories + chunks and rerank 40, the recall@8 was 15/15 with a latency of 16.3 s and a context size of 1,232 tokens.",
+   "B": "The configuration 'chunks only, rerank 40' achieved a recall@k of 15/15 (100%) with a median rank of 1, a latency of 28.0 s, and a context size of 2,845 tok.",
+   "cos": 0.838,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "After the cooling upgrade, the CPU, AVX2 (all 3) temperature dropped from a baseline peak of 92-94 °C to 75-79 °C.",
+   "B": "When all three CPUs are loaded with AVX2, the temperature reaches 92-94 °C.",
+   "cos": 0.801,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE",
+    "UNRELATED",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "Loading experimental `plx87xx.ko` via host reboot resulted in all three nodes reaching `net_device_ready`.",
+   "B": "The host was rebooted and came back with `plx87xx` loaded from the DKMS install at the correct `srcversion`, six `mbox_*` debugfs entries present, and all three nodes `net_device_ready`.",
+   "cos": 0.817,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "ALUT guest pull stayed at approximately 28 MiB/s during testing on node 0.",
+   "B": "Guest pull rate was approximately 28 MiB/s and guest push rate was approximately 4.8 GiB/s (Python) during the ALUT NTB direction session.",
+   "cos": 0.81,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "chainsx/intel-vca2-dkms has been driving this card since 2026-09-19.",
+   "B": "The `chainsx/intel-vca2-dkms` package is already running.",
+   "cos": 0.811,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "gemma-4-E4B Q4 has 72 usable facts and a 100.0% clean rate.",
+   "B": "gemma-4-E4B with thinking on and the grammar returned 5 facts in 24.6 s.",
+   "cos": 0.849,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "Tiled GEMM with dimensions 384² (128 rows×3, C=384 everywhere) took a wall time of 0.012 s, achieving ~7.1–7.7 GFLOP/s naive.",
+   "B": "For the tiled GEMM 384×384, the parallel wall time was 0.012 s, achieving a total of 7.43 GFLOP/s on Node 0.",
+   "cos": 0.888,
+   "gold": "DUPLICATE",
+   "ok": [
+    "DUPLICATE"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The Qwen3-Embedding-8B Q8_0 model results in embedding 100k documents across all three nodes in 17.5 hours.",
+   "B": "Embedding 100k documents with the 8B embedder takes 17.5 hours, compared to 1.4 hours for the 0.6B embedder.",
+   "cos": 0.831,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "Both installed host kernels define `struct dma_map_ops` with `.map_phys` / `.unmap_phys` and no `.map_page` / `.unmap_page`.",
+   "B": "The driver supports kernel 7.0 by replacing page-based dma_map_ops callbacks with physical-address variants.",
+   "cos": 0.814,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS",
+    "UNRELATED"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "When using 3 nodes, the measurement for embeddings and retrieval with Qwen3-Embedding-0.6B Q8_0 was 20.18 docs/s, representing a 2.92x scaling over 1 node.",
+   "B": "The Qwen3-Embedding-8B Q8_0 model results in embedding 100k documents across all three nodes in 17.5 hours.",
+   "cos": 0.84,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "For OLMoE-1B-7B Q4, single stream, the host only (E5-2699 v3) achieved 33.4 gen t/s.",
+   "B": "The OLMoE-1B-7B Q4_K_M model achieved 91.3 tok/s with 3 nodes.",
+   "cos": 0.819,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "For PCI IDs `0x2954` / `0x2955` (nodes 0/1), `num_ntbs` is 2, resulting in 128 × 32 MB ALUTs.",
+   "B": "For PCI ID `0x2956` (node 2), `num_ntbs` is 1, resulting in 256 × 16 MB ALUTs.",
+   "cos": 0.955,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The Qwen3-Embedding-0.6B Q8_0 model results in embedding 100k documents across all three nodes in 1.4 hours.",
+   "B": "The Qwen3-Embedding-0.6B model has a file size of 0.64 GB.",
+   "cos": 0.819,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS",
+    "UNRELATED"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "Recovery from the `jumbo_mtu` hang, without rebooting, is achieved by running `rmmod jumbo_mtu`, which drops the references and allows the unregister to complete.",
+   "B": "The `jumbo_mtu` module is currently loaded, setting eth0/1/2 to 65521, and running `rmmod jumbo_mtu` restores the default of 1500.",
+   "cos": 0.826,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "The ICD file `/etc/OpenCL/vendors/intel.icd` contains `/usr/local/lib64/libigdrcl.so` which is a vendor driver.",
+   "B": "All three nodes use the `ocl-icd-libopencl1` package via Xenial apt, which causes `libOpenCL.so.1` to load `/usr/local/lib64/libigdrcl.so`.",
+   "cos": 0.849,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "The Qwen3-Embedding-0.6B Q8_0 model results in embedding 100k documents across all three nodes in 1.4 hours.",
+   "B": "The Qwen3-Embedding-8B Q8_0 model processed 256 docs in batches of 32 at a rate of 0.54 docs/s/node.",
+   "cos": 0.917,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "The configuration 'memories + chunks, no rerank' achieved a recall of 13/15 (87%) with a median rank of 1, a latency of 0.18 s, and a context size of 417 tok.",
+   "B": "The configuration 'chunks only, rerank 40' achieved a recall@k of 15/15 (100%) with a median rank of 1, a latency of 28.0 s, and a context size of 2,845 tok.",
+   "cos": 0.928,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  },
+  {
+   "A": "gemma-4-E4B has 9.9 GB free per node.",
+   "B": "gemma-4-E4B Q4 has 72 usable facts and a 100.0% clean rate.",
+   "cos": 0.803,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED",
+    "EXTENDS"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "The Qwen3-Embedding-8B Q8_0 model results in embedding 100k documents across all three nodes in 17.5 hours.",
+   "B": "The Qwen3-Embedding-8B Q8_0 model processed 256 docs in batches of 32 at a rate of 0.54 docs/s/node.",
+   "cos": 0.94,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "Under sustained AVX2 on one node, the package power was 39.0 W out of a 45 W limit.",
+   "B": "Under sustained AVX2 on one node, the core clock was 3400 MHz (base 3.0, single-core turbo 3.7) and the package power was 39.0 W of a 45 W cap.",
+   "cos": 0.813,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "Under sustained AVX2 on one node, the core clock was 3400 MHz (base 3.0, single-core turbo 3.7).",
+   "B": "Under sustained AVX2 on one node, the core clock was 3400 MHz (base 3.0, single-core turbo 3.7) and the package power was 39.0 W of a 45 W cap.",
+   "cos": 0.935,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS"
+   ],
+   "link": "yes",
+   "linkedNow": null
+  },
+  {
+   "A": "The iGPU evicts the CPU's working set from the shared eDRAM/LLC.",
+   "B": "The cache-resident case degrades worse when the iGPU is busy, which suggests the iGPU is evicting the CPU's working set from the shared eDRAM/LLC.",
+   "cos": 0.868,
+   "gold": "EXTENDS",
+   "ok": [
+    "EXTENDS",
+    "DUPLICATE"
+   ],
+   "link": "either",
+   "linkedNow": null
+  },
+  {
+   "A": "The Qwen3-Embedding-8B Q8_0 model results in embedding 100k documents across all three nodes in 17.5 hours.",
+   "B": "The Qwen3-Embedding-0.6B Q8_0 model showed a scaling factor of 2.92x.",
+   "cos": 0.837,
+   "gold": "UNRELATED",
+   "ok": [
+    "UNRELATED"
+   ],
+   "link": "no",
+   "linkedNow": null
+  }
+ ]
+}

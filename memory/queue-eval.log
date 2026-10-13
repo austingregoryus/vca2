@@ -1,0 +1,19 @@
+corpus
+  documents              22
+  chunks                 448
+  memories_live          726
+  memories_superseded    4
+  memories_forgotten     0
+  corpus_chars           296040
+  corpus_tokens          105,729
+
+retrieval
+  mem+chunks, rerank 40      recall@8=15/15 (100%)  median rank 1  latency 15.10s  ctx 1480 tok
+  mem+chunks, rerank 20      recall@8=12/15 (80%)  median rank 1  latency 7.73s  ctx 1109 tok
+  mem+chunks, no rerank      recall@8=12/15 (80%)  median rank 2  latency 0.11s  ctx 783 tok
+  chunks only, rerank        recall@8=15/15 (100%)  median rank 1  latency 25.59s  ctx 2784 tok
+  memories only, rerank      recall@8=12/15 (80%)  median rank 1  latency 10.23s  ctx 369 tok
+  memories only, k=15        recall@15=12/15 (80%)  median rank 1  latency 10.71s  ctx 720 tok
+
+  best: mem+chunks, rerank 40
+  compression: 105,729 corpus tokens -> 1480 context tokens (98.60% reduction)

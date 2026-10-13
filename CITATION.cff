@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: CC-BY-4.0
+cff-version: 1.2.0
+message: "If you use these measurements or this code, please cite it as below."
+title: "Intel VCA 2: making an end-of-life accelerator useful again"
+abstract: >-
+  Reverse-engineering notes, measurements and working code for the Intel
+  Visual Compute Accelerator 2 (VCA1585LMV), a discontinued PCIe card with
+  three Xeon E3-1585L v5 nodes and three Iris Pro P580 GPUs. Covers a tuned
+  OpenCL GEMM (1.36 TFLOP/s per card), the undocumented PLX DMA engine
+  (144x faster node reads, 4.4 GB/s CPU-free node-to-node), a reproducible
+  Ubuntu 22.04 node image on Intel's 4.14 kernel, thermal and power
+  characterisation with printable fan shrouds, and applications built on
+  the card: a local agent-memory service and a video render farm.
+type: software
+version: 1.0.0
+date-released: 2026-10-13
+authors:
+  - given-names: Austin
+    family-names: Gregory
+    website: "https://austingregory.us"
+repository-code: "https://github.com/austingregoryus/vca2"
+license:
+  - GPL-2.0-only
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - Intel VCA 2
+  - VCA1585LMV
+  - PCIe non-transparent bridge
+  - DMA
+  - OpenCL
+  - Iris Pro P580
+  - hardware reuse
+  - e-waste
+  - reverse engineering
+  - LLM inference

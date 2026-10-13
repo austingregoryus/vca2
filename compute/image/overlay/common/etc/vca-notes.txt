@@ -1,0 +1,27 @@
+Things checked on this hardware and found NOT possible. Do not spend time
+retrying them.
+
+Full-segment (32 MiB) A-LUT buffers:
+  The buddy allocator caps at 4 MiB (MAX_ORDER=11). CONFIG_CMA=y but
+  CONFIG_DMA_CMA is NOT set, so a cma= boot parameter will not make
+  dma_alloc_coherent use a CMA area -- verified against
+  /boot/config-4.14.20-1.2.3.26.vca.
+  The route is a boot-time reservation, e.g. on the grub cmdline:
+      memmap=32M$0x100000000
+  and a module that ioremaps the range. CONFIG_STRICT_DEVMEM=y, so /dev/mem
+  will not reach it from userspace.
+
+PCIe MaxReadReq > 128 B:
+  Hardwired in the NTB. setpci writes are accepted and the readback is still
+  128. Tried on node 0; do not repeat on the others.
+
+Node-to-node PCIe peer-to-peer (no host staging):
+  Impossible on this platform. Not ACS, not the switch -- the TLP reaches the
+  host fine. The E5-2699 v3 root complex will not reflect an upstream write
+  back down to a peer BAR. Proven with a host-write control. Use host staging.
+
+Building kernel modules here:
+  Works, but modern binutils emits R_X86_64_PLT32, which this 4.14.20 module
+  loader predates. A module will compile cleanly, match vermagic exactly, and
+  still fail to load with "Invalid module format" / "Unknown rela relocation: 4".
+  Fix:  make && plt32-to-pc32 *.ko && insmod ./x.ko

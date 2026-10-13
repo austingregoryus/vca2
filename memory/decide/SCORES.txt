@@ -1,0 +1,88 @@
+
+== types ==
+  baseline (always fact) lenient 87/112  strict 64/86    0.00 s mean,  0.00 median
+      preference precision 0/0   recall 4/19
+      episode    precision 0/0   recall 4/14
+  gemma4-E4B grammar     lenient 99/112  strict 74/86    1.66 s mean,  1.60 median
+      preference precision 20/29   recall 18/19
+      episode    precision 14/16   recall 12/14
+  gemma4-E4B letters1    lenient 101/112  strict 76/86    2.41 s mean,  2.38 median
+      preference precision 16/17   recall 16/19
+      episode    precision 8/10   recall 9/14
+      ECE 0.072   conf>=0.8: 94/103 right, covers 103/112   conf>=0.9: 91/98 right, covers 98/112
+  gemma4-E4B letters     lenient 101/112  strict 76/86    4.81 s mean,  4.76 median
+      preference precision 17/18   recall 16/19
+      episode    precision 7/9   recall 9/14
+      ECE 0.072   conf>=0.8: 98/107 right, covers 107/112   conf>=0.9: 91/99 right, covers 99/112
+  gemma4-E4B rerank      lenient 57/112  strict 37/86    2.71 s mean,  2.23 median
+      preference precision 7/13   recall 7/19
+      episode    precision 7/41   recall 7/14
+      ECE 0.058   conf>=0.8: 6/11 right, covers 11/112   conf>=0.9: 3/5 right, covers 5/112
+  qwen35-08b grammar     lenient 39/112  strict 22/86    0.33 s mean,  0.32 median
+      preference precision 2/3   recall 4/19
+      episode    precision 21/90   recall 13/14
+  qwen35-08b letters1    lenient 91/112  strict 68/86    0.42 s mean,  0.40 median
+      preference precision 2/2   recall 6/19
+      episode    precision 3/4   recall 7/14
+      ECE 0.073   conf>=0.8: 79/93 right, covers 93/112   conf>=0.9: 55/63 right, covers 63/112
+  qwen35-08b letters     lenient 88/112  strict 66/86    0.83 s mean,  0.80 median
+      preference precision 2/2   recall 5/19
+      episode    precision 5/11   recall 7/14
+      ECE 0.091   conf>=0.8: 19/21 right, covers 21/112   conf>=0.9: 4/4 right, covers 4/112
+  qwen35-2b grammar      lenient 91/112  strict 67/86    0.70 s mean,  0.66 median
+      preference precision 4/4   recall 7/19
+      episode    precision 6/10   recall 8/14
+  qwen35-2b letters1     lenient 93/112  strict 70/86    1.01 s mean,  0.97 median
+      preference precision 3/3   recall 7/19
+      episode    precision 3/4   recall 7/14
+      ECE 0.026   conf>=0.8: 69/75 right, covers 75/112   conf>=0.9: 33/33 right, covers 33/112
+  qwen35-2b letters      lenient 93/112  strict 70/86    1.97 s mean,  1.94 median
+      preference precision 3/3   recall 7/19
+      episode    precision 3/3   recall 7/14
+      ECE 0.043   conf>=0.8: 65/70 right, covers 70/112   conf>=0.9: 19/19 right, covers 19/112
+  llama32-1b grammar     lenient 32/112  strict 15/86    0.34 s mean,  0.32 median
+      preference precision 6/12   recall 7/19
+      episode    precision 22/96   recall 13/14
+  llama32-1b letters1    lenient 74/112  strict 56/86    0.44 s mean,  0.44 median
+      preference precision 2/3   recall 5/19
+      episode    precision 8/27   recall 9/14
+      ECE 0.105   conf>=0.8: 5/9 right, covers 9/112   conf>=0.9: 1/1 right, covers 1/112
+  llama32-1b letters     lenient 77/112  strict 58/86    0.66 s mean,  0.65 median
+      preference precision 0/1   recall 3/19
+      episode    precision 2/13   recall 5/14
+      ECE 0.129   conf>=0.8: 3/3 right, covers 3/112   conf>=0.9: 2/2 right, covers 2/112
+
+== pairs ==
+  baseline (always UNRELATED) link: precision 0/0  recall 0/11  correct 23/34   4-way 29/50    0.00 s mean,  0.00 median
+  gemma4-E4B grammar     link: precision 11/18  recall 11/11  correct 27/34   4-way 41/50    3.44 s mean,  3.39 median
+  gemma4-E4B letters1    link: precision 11/16  recall 11/11  correct 29/34   4-way 44/50    4.21 s mean,  4.20 median
+      AUC 0.964   p>=0.5: 11 right / 5 wrong links   p>=0.8: 11 right / 5 wrong links   p>=0.9: 11 right / 3 wrong links
+  gemma4-E4B letters     link: precision 11/16  recall 11/11  correct 29/34   4-way 44/50    8.42 s mean,  8.46 median
+      AUC 0.964   p>=0.5: 11 right / 5 wrong links   p>=0.8: 11 right / 3 wrong links   p>=0.9: 11 right / 2 wrong links
+  gemma4-E4B rerank      link: precision 11/34  recall 11/11  correct 11/34   4-way 27/50    1.03 s mean,  1.03 median
+      AUC 0.830   p>=0.5: 11 right / 23 wrong links   p>=0.8: 11 right / 23 wrong links   p>=0.9: 11 right / 23 wrong links
+  qwen35-08b grammar     link: precision 5/6  recall 5/11  correct 27/34   4-way 18/50    0.67 s mean,  0.65 median
+  qwen35-08b letters1    link: precision 11/34  recall 11/11  correct 11/34   4-way 27/50    0.75 s mean,  0.73 median
+      AUC 0.759   p>=0.5: 11 right / 23 wrong links   p>=0.8: 10 right / 21 wrong links   p>=0.9: 8 right / 10 wrong links
+  qwen35-08b letters     link: precision 11/34  recall 11/11  correct 11/34   4-way 27/50    1.44 s mean,  1.45 median
+      AUC 0.798   p>=0.5: 11 right / 23 wrong links   p>=0.8: 8 right / 6 wrong links   p>=0.9: 0 right / 0 wrong links
+  qwen35-2b grammar      link: precision 8/13  recall 8/11  correct 26/34   4-way 32/50    1.49 s mean,  1.44 median
+  qwen35-2b letters1     link: precision 7/10  recall 7/11  correct 27/34   4-way 27/50    1.78 s mean,  1.73 median
+      AUC 0.791   p>=0.5: 3 right / 1 wrong links   p>=0.8: 0 right / 0 wrong links   p>=0.9: 0 right / 0 wrong links
+  qwen35-2b letters      link: precision 8/14  recall 8/11  correct 25/34   4-way 34/50    3.39 s mean,  3.40 median
+      AUC 0.783   p>=0.5: 4 right / 1 wrong links   p>=0.8: 0 right / 0 wrong links   p>=0.9: 0 right / 0 wrong links
+  llama32-1b grammar     link: precision 2/2  recall 2/11  correct 25/34   4-way 4/50    0.66 s mean,  0.64 median
+  llama32-1b letters1    link: precision 6/21  recall 6/11  correct 14/34   4-way 17/50    0.78 s mean,  0.77 median
+      AUC 0.411   p>=0.5: 1 right / 3 wrong links   p>=0.8: 0 right / 0 wrong links   p>=0.9: 0 right / 0 wrong links
+  llama32-1b letters     link: precision 11/34  recall 11/11  correct 11/34   4-way 27/50    1.06 s mean,  1.07 median
+      AUC 0.589   p>=0.5: 5 right / 4 wrong links   p>=0.8: 0 right / 0 wrong links   p>=0.9: 0 right / 0 wrong links
+
+== cascade: reranker screen, then gemma4-E4B ==
+    LLM = grammar
+      cascade [0.1, 0.9): 11/34 correct, precision 11/34, recall 11/11, 0/34 sent to LLM, 1.04 s/decision
+      cascade [0.05, 0.95): 12/34 correct, precision 11/33, recall 11/11, 1/34 sent to LLM, 1.13 s/decision
+      cascade [0.2, 0.8): 11/34 correct, precision 11/34, recall 11/11, 0/34 sent to LLM, 1.04 s/decision
+    LLM = letters1
+      cascade [0.1, 0.9): 11/34 correct, precision 11/34, recall 11/11, 0/34 sent to LLM, 1.04 s/decision
+      cascade [0.05, 0.95): 12/34 correct, precision 11/33, recall 11/11, 1/34 sent to LLM, 1.15 s/decision
+      cascade [0.2, 0.8): 11/34 correct, precision 11/34, recall 11/11, 0/34 sent to LLM, 1.04 s/decision

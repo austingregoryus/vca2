@@ -1,0 +1,5 @@
+t_s,phase,pkg_w,core_w,uncore_w,dram_w,tmax_c,tpkg_c,gt_mhz
+291,cpu,46.0,42.1,0.0,1.2,94,94,350
+TRIP 94C -- killing loads
+5,idle,43.7,39.3,0.0,1.2,94,94,350
+TRIP 94C -- killing loads

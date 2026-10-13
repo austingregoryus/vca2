@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+[Unit]
+Description=Apply VCA host-provided network configuration
+Documentation=https://github.com/austingregoryus/vca2
+DefaultDependencies=no
+After=sysinit.target local-fs.target
+Before=network.target vca_agent.service
+Wants=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/vca-netcfg.sh
+# The script polls for up to 40 x ~4 s waiting for the host to populate
+# net_config, so the unit timeout must exceed that or systemd kills a run
+# that was about to succeed.
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

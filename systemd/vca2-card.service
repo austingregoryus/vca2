@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: MIT
+# Bring the VCA 2 nodes (both cards) up at host boot, and down cleanly at shutdown.
+#
+# Intel's vcactl.service only starts the vcactld daemon (auto-boot is 0), so
+# nothing else boots the nodes. This runs the repo's known-good bring-up
+# (scripts/vca2-boot.sh, installed as /usr/local/sbin/vca2-boot):
+# the right images, jumbo MTU on the host NICs, and end-to-end checks.
+[Unit]
+Description=Intel VCA 2 nodes (boot at start, clean poweroff at stop)
+Wants=network-online.target vcactl.service
+After=network-online.target vcactl.service zfs-mount.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/vca2-boot
+# NAT for the nodes is persisted in /etc/iptables/rules.v4 already; this is
+# idempotent belt-and-braces, and allowed to fail.
+ExecStartPost=-/usr/local/sbin/vca2-enable-nat
+ExecStop=/usr/local/sbin/vca2-shutdown
+# A dead node costs ~6 min of retries before it is skipped; a cold boot
+# walks every node of every card, so allow well over the ~10 min worst case.
+TimeoutStartSec=1800
+TimeoutStopSec=240
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: MIT
+[Unit]
+Description=Intel VCA2 automatic node boot
+After=local-fs.target network-online.target netfilter-persistent.service
+Wants=network-online.target
+ConditionPathExists=/usr/local/sbin/vca2-start
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/vca2-start
+RemainAfterExit=yes
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

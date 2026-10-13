@@ -1,0 +1,7 @@
+# These files are a byte-exact recovery of the source that built the running
+# host plx87xx.ko. srcversion is a hash of the source text, so ANY line-ending
+# conversion changes it and breaks the one check that proves the recovery is
+# complete. Treat them as binary: no eol translation, in either direction.
+plx_mbox.c      -text
+plx_mbox.h      -text
+plx_debugfs.patch -text

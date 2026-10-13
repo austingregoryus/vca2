@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: MIT
+obj-m := dmabench2.o dmabench.o alut_gmap.o n2n.o ring.o ctrlpoke.o
+KDIR ?= /lib/modules/$(shell uname -r)/build
+
+all:
+	$(MAKE) -C $(KDIR) M=$(CURDIR) modules
+
+clean:
+	$(MAKE) -C $(KDIR) M=$(CURDIR) clean

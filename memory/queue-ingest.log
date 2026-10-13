@@ -1,0 +1,22 @@
+START 2026-09-22T19:23:10
+  phase 1: 448 chunks from 22 documents embedded in 244.0s
+  phase 2: 10/139 extraction calls (294s)
+  phase 2: 20/139 extraction calls (539s)
+  phase 2: 30/139 extraction calls (744s)
+  phase 2: 40/139 extraction calls (962s)
+  phase 2: 50/139 extraction calls (1196s)
+  phase 2: 60/139 extraction calls (1392s)
+  phase 2: 70/139 extraction calls (1594s)
+  phase 2: 80/139 extraction calls (1789s)
+  phase 2: 90/139 extraction calls (2010s)
+  phase 2: 100/139 extraction calls (2178s)
+  phase 2: 110/139 extraction calls (2365s)
+  phase 2: 120/139 extraction calls (2530s)
+  phase 2: 130/139 extraction calls (2690s)
+  phase 2: 139/139 extraction calls (2759s)
+  phase 3: reconciled into 730 memories in 583.8s
+
+22 docs, 448 chunks, 730 memories in 3587.2s
+  embed 244.0s  extract 2759.4s (139 calls)  reconcile 583.8s
+  node dispatch: {'172.31.1.1': 128, '172.31.2.1': 130, '172.31.3.1': 132}
+END 2026-09-22T20:22:57

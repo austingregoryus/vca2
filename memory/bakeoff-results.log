@@ -1,0 +1,124 @@
+workload: 12 chunk groups from 10 documents, 29,346 chars
+
+====================================================================================================
+PHASE 1 -- capability probe (does it return content at all?)
+====================================================================================================
+
+[gemma4.gguf] baseline, ~4B active
+  node0 up     node1 up     node2 up
+  gemma-4-E4B  Q4
+    thinking  grammar   content  reason  finish  facts    wall
+    on        off            0ch   1089ch  length      0   53.8s
+    on        on           278ch      0ch    stop      5   24.7s
+    off       off          293ch      0ch    stop      6   26.1s
+    off       on           293ch      0ch    stop      6   26.0s
+    -> GRAMMAR RESCUE: 0 facts unconstrained -> 5 constrained
+
+[minicpm5.gguf] 1.98B non-emb dense, IFEval 86.7
+  node0 up     node1 up     node2 up
+  MiniCPM5-2B  Q4
+    thinking  grammar   content  reason  finish  facts    wall
+    on        off            0ch   1137ch  length      0   24.8s
+    on        on             0ch      2ch    stop      0    4.4s
+    off       off          287ch      0ch    stop      0   10.4s
+    off       on           253ch      0ch    stop      4    5.4s
+    -> REASONING TRAP: content is empty unless thinking is off
+    -> GRAMMAR RESCUE: 0 facts unconstrained -> 4 constrained
+
+[olmoe.gguf] 6.9B total / 1.3B active MoE
+  node0 up     node1 up     node2 up
+  OLMoE-1B-7B  Q4
+    thinking  grammar   content  reason  finish  facts    wall
+    on        off          674ch      0ch    stop      6   12.7s
+    on        on           674ch      0ch    stop      6   12.5s
+    off       off          227ch      0ch    stop      0    7.8s
+    off       on           530ch      0ch    stop      6    6.0s
+
+[llama32-1b.gguf] 1.24B dense
+  node0 up     node1 up     node2 up
+  Llama-3.2-1B Q4
+    thinking  grammar   content  reason  finish  facts    wall
+    on        off          257ch      0ch    stop      5    5.2s
+    on        on           226ch      0ch    stop      2    4.8s
+    off       off          236ch      0ch    stop      3    4.9s
+    off       on           245ch      0ch    stop      5    3.1s
+
+====================================================================================================
+PHASE 2 -- extraction bake-off (JSON constrained by GBNF grammar)
+====================================================================================================
+
+[gemma-4-E4B  Q4] baseline, ~4B active
+  node0 up     node1 up     node2 up
+    enable_thinking=false: no (no thinking mode)
+    12 calls, 72 facts, 57.3s median, fidelity 100.0%
+      + The ALUT mailbox supports a 3-node doorbell and host-push functionality.
+      + Host DMA buffer plus a guest A-LUT entry allows each node to mmap BAR2.
+      + Host can push into a guest buffer via host BAR2, and this mechanism does not require virtio-net,
+      + The function `mbox_alloc` is 0200 (write-only), meaning `cat` cannot trigger it.
+      + The function `mbox_info` is 0444 and supports seq_printf only.
+
+[MiniCPM5-2B  Q4] 1.98B non-emb dense, IFEval 86.7
+  node0 up     node1 up     node2 up
+    enable_thinking=false: yes
+    12 calls, 32 facts, 18.1s median, fidelity 90.6%
+      + > Three nodes are 2.6× slower than one.
+      + The DMA ring does 4462 MiB/s CPU-free.
+      + The problem is serialization, not bandwidth.
+      + llama.cpp has no tensor-parallel RPC backend.
+      + Three independent workers scale 2.96x.
+      ! unsupported []: > Three nodes are 2.6× slower than one.
+      ! unsupported []: It is consistent
+      ! unsupported []: Counters are monotonic
+
+[OLMoE-1B-7B  Q4] 6.9B total / 1.3B active MoE
+  node0 up     node1 up     node2 up
+    enable_thinking=false: no (no thinking mode)
+    12 calls, 60 facts, 17.7s median, fidelity 88.3%
+      + Is this card worth the slot?
+      + What the card is *not* for
+      + Three nodes are 2.6× slower than one
+      + This is not a fabric limitation
+      + Tensor parallelism *would* use the fabric well
+      ! unsupported []: Is this card worth the slot?
+      ! unsupported []: What the card is *not* for
+      ! unsupported []: The first attempt at this measured **17.9 tok/s/node** and suggested poor scal
+
+[Llama-3.2-1B Q4] 1.24B dense
+  node0 up     node1 up     node2 up
+    enable_thinking=false: no (no thinking mode)
+    12 calls, 49 facts, 17.3s median, fidelity 77.6%
+      + Must allocate a whole segment
+      + A 4 KiB buffer in a 32 MiB window would alias other host RAM
+      + mbox_alloc is 0200 (write-only)
+      + mbox_info is 0444 seq_printf only
+      + plx_mbox.o compiled into plx87xx.ko
+      ! unsupported []: Must allocate a whole segment
+      ! unsupported []: debugfs appeared: /sys/kernel/debug/plx87xx/0000:05:00.0/mbox_alloc
+      ! unsupported []: Is this card worth the slot?
+
+====================================================================================================
+RESULTS
+====================================================================================================
+
+  model              prefill  s/call  vs base  facts  bad#  echo  form  USABLE   clean
+  ----------------------------------------------------------------------------------------
+  gemma-4-E4B  Q4      34.6t/s   57.3s    1.00x     72     0     0     0      72  100.0%
+  MiniCPM5-2B  Q4      67.5t/s   18.1s    3.17x     32     0     0     3      29   90.6%
+                     (form: fragment 2, markdown 1)
+  OLMoE-1B-7B  Q4      99.4t/s   17.7s    3.24x     60     0     0     7      53   88.3%
+                     (form: fragment 1, markdown 5, question 1)
+  Llama-3.2-1B Q4     150.5t/s   17.3s    3.31x     49     0     0    11      38   77.6%
+                     (form: fragment 3, markdown 4, question 4)
+
+  bad#   = fact contains a number absent from the source
+  echo   = fact is a sentence copied from the prompt, not the document
+  form   = a heading, a question or a fragment, not a standalone claim
+  USABLE = survives all three checks. The only column that matters.
+
+  Projected full-corpus ingest (extraction is ~85% of 71.9 min):
+    gemma-4-E4B  Q4    71.9 min   0.105 usable facts/s   (baseline)
+    MiniCPM5-2B  Q4    30.1 min   0.114 usable facts/s   (3.17x speed)
+    OLMoE-1B-7B  Q4    29.6 min   0.231 usable facts/s   (3.24x speed)
+    Llama-3.2-1B Q4    29.3 min   0.190 usable facts/s   (3.31x speed)
+
+  node dispatch: {'172.31.1.1': 22, '172.31.2.1': 21, '172.31.3.1': 21}
